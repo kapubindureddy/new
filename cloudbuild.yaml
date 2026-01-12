@@ -1,24 +1,24 @@
 steps:
 - name: 'gcr.io/cloud-builders/docker'
-  args: ['build', '-t', 'us-central1-docker.pkg.dev/bionic-upgrade-484010-t5/gke-repo/quickstart-image:latest', './app1' ]
+  args: ['build', '-t', 'us-central1-docker.pkg.dev/bionic-upgrade-484010-t5/new-repo/quickstart-image:latest', './app1' ]
   id: 'Build Docker Image'
 
   # images:
   # - 'us-central1-docker.pkg.dev/<your_project_id>/gke-repo/quickstart-image'
 
 - name: 'gcr.io/cloud-builders/docker'
-  args: ['push', 'us-central1-docker.pkg.dev/bionic-upgrade-484010-t5/gke-repo/quickstart-image:latest' ]
+  args: ['push', 'us-central1-docker.pkg.dev/bionic-upgrade-484010-t5/new-repo/quickstart-image:latest' ]
   id: 'Push Docker Image'
 
 - name: 'gcr.io/cloud-builders/docker'
-  args: ['build', '-t', 'us-central1-docker.pkg.dev/bionic-upgrade-484010-t5/gke-repo/flask-image:latest', './app2' ]
+  args: ['build', '-t', 'us-central1-docker.pkg.dev/bionic-upgrade-484010-t5/new-repo/flask-image:latest', './app2' ]
   id: 'Build Docker Image2'
 
   # images:
   # - 'us-central1-docker.pkg.dev/<your_project_id>/gke-repo/quickstart-image'
 
 - name: 'gcr.io/cloud-builders/docker'
-  args: ['push', 'us-central1-docker.pkg.dev/bionic-upgrade-484010-t5/gke-repo/flask-image:latest' ]
+  args: ['push', 'us-central1-docker.pkg.dev/bionic-upgrade-484010-t5/new-repo/flask-image:latest' ]
   id: 'Push Docker Image2'
 
 
