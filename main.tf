@@ -1,6 +1,6 @@
 resource "google_storage_bucket" "no-public-access" {
   name          = "sbuc-bucket"
-  project       = "project-69e9b208-7ce4-4626-a3a"
+  project       = "bionic-upgrade-484010-t5"
   location      = "US"
   force_destroy = true
 
